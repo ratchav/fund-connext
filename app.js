@@ -20,3 +20,9 @@ app.post('/api/passthrough/customers/v2', (req, res) => {
         referenceNo: 'MOCK FROM NODEJS'
     }, req.body));
 })
+
+app.post('/api/passthrough/uploadAttachment', (req, res) => {
+    res.json(Object.assign({
+        referenceNo: 'Upload Attachment'
+    }, req.body));
+})
