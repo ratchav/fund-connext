@@ -14,3 +14,9 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log("application is listening on:", port);
 });
+
+app.post('/api/passthrough/customers/v2', (req, res) => {
+    res.json(Object.assign({
+        referenceNo: 'MOCK FROM NODEJS'
+    }, req.body));
+})
