@@ -1,10 +1,4 @@
-var express = require('express')
-var app = express()
-// const bodyParser = require('body-parser')
-// const cors = require('cors');
-// const fileUpload = require('express-fileupload');
-// const morgan = require('morgan');
-// const _ = require('lodash');
+var express = require("express");
 var app = express();
 
 var port = process.env.PORT || 5000;
@@ -15,12 +9,6 @@ app.get("/", (req, res) => {
         data: { text: "hello" }
     }
     res.json(responseObject);
-});
-
-app.post('/api/passthrough/customers/v2', (req, res) => {
-    res.json(Object.assign({
-        referenceNo: 'MOCK FROM NODEJS'
-    }, req.body));
 });
 
 app.listen(port, () => {
